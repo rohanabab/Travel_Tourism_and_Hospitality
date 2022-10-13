@@ -1,0 +1,53 @@
+<body class="special">
+  <mat-toolbar color="primary">
+    <span class="example-spacer"></span>
+    <span>Sell your Cars Here</span>
+    <span class="example-spacer"></span>
+  </mat-toolbar>
+    <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title>Selling Details</mat-card-title>
+        </mat-card-header>
+        <form>
+          <label class="label_1">Name: </label>
+          <input type="text" [(ngModel)]="name" placeholder="Enter Name" name="name" class="input_1">
+          <label for="phone" class="label_2">Phone no:</label>
+          <input type="tel" [(ngModel)]="phone" placeholder="Enter Phone num" name="phone" class="input_2">
+          <label for="cars" class="label_3">Car Model:</label>
+          <input type="text" [(ngModel)]="car_model" placeholder="Enter car model" name="car_type" class="input_3">
+          <label for="city" class="label_4">City:</label>
+          <input type="text" [(ngModel)]="city" placeholder="Enter City" name="city" class="input_4">
+          <label for="state" class="label_5">State:</label>
+          <input type="text" [(ngModel)]="state" placeholder="Enter State" name="state" class="input_5">
+          <label for="price" class="label_6">Price:</label>
+          <input type="text" [(ngModel)]="price" placeholder="Enter Selling Price" name="price" class="input_6">
+        </form>
+        <button mat-raised-button class="but1" (click)="SubmitOn()">Submit</button>
+        <button mat-raised-button class="but2">Reset</button>
+    </mat-card>
+    <table class="table-effect">
+      <thead>
+        <tr>
+          <th style="color: brown;">Name</th>
+          <th style="color: brown;">Phone</th>
+          <th style="color: brown;">Car Model</th>
+          <th style="color: brown;">City</th>
+          <th style="color: brown;">State</th>
+          <th style="color: brown;">Price</th>
+          <th></th>
+        </tr>
+      </thead>
+      <thead *ngFor="let detail of customer_details">
+        <tr>
+          <th style="color: brown;">{{detail.name}}</th>
+          <th style="color: brown;">{{detail.phone}}</th>
+          <th style="color: brown;">{{detail.car_model}}</th>
+          <th style="color: brown;">{{detail.city}}</th>
+          <th style="color: brown;">{{detail.state}}</th>
+          <th style="color: brown;">{{detail.price}}</th>
+          <th></th>
+        </tr>
+      </thead>
+    </table>
+</body>
+<router-outlet></router-outlet>

@@ -1,0 +1,54 @@
+<body class="bgimg3">
+    <mat-card class="card">
+        <mat-card-header>
+          <mat-card-title style="text-align: center;"> &nbsp; Enter Your Details Here</mat-card-title>
+        </mat-card-header>
+        <form>
+            <label for="first name" class="label_1">First Name:</label>
+            <input type="text" [(ngModel)]="first_name" placeholder="Enter first name" name="first name" class="input_1">
+            <label for="last name" class="label_2">Last Name:</label>
+            <input type="text" [(ngModel)]="last_name" placeholder="Enter last name" name="last name" class="input_2">
+            <label for="email" class="label_3">Email Id:</label>
+            <input type="email"  [(ngModel)]="email_id" placeholder="Enter email" name="email" class="input_3">
+            <label for="cars" class="label_4">Transport Mode:</label>
+            <select name="Cars"   
+            class="input_4" [(ngModel)]="modeoftransport">
+                <option value="Aeroplane">Aeroplane</option>
+                <option value="Ship">Ship</option>
+                <option value="Auto">Auto</option>
+                <option value="Car">Car</option>
+                <option value="Train">Train</option>
+                <option value="Bus">Bus</option>
+            </select>
+            <label for="phone" class="label_5">Phone no:</label>
+            <input type="tel"  [(ngModel)]="phone_no" placeholder="Enter Phone num" name="phone" class="input_5">
+            <label for="date" class="label_6">Departure Time:</label>
+            <input type="date" name="datetime" [(ngModel)]="date" class="input_6">
+            <label for="address" class="label_7">Destination:</label>
+            <input type="text" [(ngModel)]="Destination" placeholder="Destination" name="address" class="input_7">
+            <label for="city" class="label_8">Starting Point:</label>
+            <input type="text"  [(ngModel)]="StartingPoint" placeholder="Enter Starting Point" name="city" class="input_8">
+         
+            <label for="price" class="label_10">Price:</label>
+            <select name="Cars"   
+            class="input_10" [(ngModel)]="price">
+                <option value="10000">10000Rs(Lower Class)</option>
+                <option value="100000">100000Rs(Middle Class)</option>
+                <option value="2000000">200000Rs(Business Class)</option>
+
+            </select>
+            <label for="persons" class="label_11">No Of Persons</label>
+            <select name="Cars"   
+            class="input_11" [(ngModel)]="persons">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>       
+            </select>
+
+            <button mat-raised-button class="but1" (click)="Finish()">Finish</button>
+        </form>
+    </mat-card>
+</body>
+<router-outlet></router-outlet>

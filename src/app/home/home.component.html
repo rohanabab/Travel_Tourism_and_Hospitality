@@ -1,0 +1,50 @@
+<body class=bgimg2>
+    <html>
+        <head>
+        <style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color:#f2bc94;
+        
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+         
+          display: block;
+          color: #30110d;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+        
+        li a:hover {
+          background-color:white;
+        }
+        </style>
+        </head>
+        <body>
+        
+        <ul>
+          <li><a routerLink='/home'>Home</a></li>
+          <li><a routerLink='/buy'>Book Tickets</a></li>
+          <li><a routerLink='/tourism'>Tourism</a></li>
+          <li><a routerLink='/aboutus'>About</a></li>
+        
+        </ul>
+        <p class="p">Travel Around India With Us. Click Here</p>
+        <a><img class="img1" src="assets\air-travel-logo-template_71046-2-original.jpg" routerLink='/buy' width="400" height="250"></a>
+        
+        
+<p class="p1">See Various Places to travel. Click Here on the picture Above</p>
+<a><img class="img2" src="assets\taj.jpg" routerLink='/tourism' width="400" height="250"></a>
+  
+<iframe class="frame" width="560" height="315" src="https://trinket.io/library/trinkets/3e3fccc57d" ></iframe>  
+</body>
+<router-outlet></router-outlet>
